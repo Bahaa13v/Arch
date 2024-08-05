@@ -2,4 +2,5 @@ arch-chroot /mnt/problem.sh
 
 umount -R /mnt
 
-reboot
+echo "Done installing thanks to bahaa"
+echo "type the word reboot"
