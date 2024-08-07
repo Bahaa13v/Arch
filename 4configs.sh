@@ -25,7 +25,6 @@ useradd -m -G wheel,video,audio -s /bin/bash bahaa
 
 echo "bahaa:b" | chpasswd
 
-systemctl enable sddm
 systemctl enable NetworkManager
 
 EOF
