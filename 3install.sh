@@ -6,6 +6,6 @@ swapon /dev/sda2
 
 mount /dev/sda1 /mnt
 
-pacstrap -K /mnt base linux linux-firmware grub sudo networkmanager nano sddm sway
+pacstrap -K /mnt base linux linux-firmware grub sudo networkmanager nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
