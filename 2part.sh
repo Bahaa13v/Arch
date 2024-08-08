@@ -1,3 +1,5 @@
 #!/bin/bash
-sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress
-echo -e "o\nn\np\n1\n\n-16G\ny\nn\np\n2\n\ny\nw" | fdisk /dev/sda
+
+sudo parted /dev/sda mklabel msdos
+sudo wipefs --all --force /dev/sda
+sudo parted /dev/sda --script -- mklabel msdos mkpart primary btrfs 0% -16G mkpart primary linux-swap -16G 100%
