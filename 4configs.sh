@@ -54,7 +54,7 @@ echo "nmcli device wifi connect D-Link password 002735mmR" > /home/bahaa/scripts
 chmod +x /home/bahaa/scripts/dlink.sh
 git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
 chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
-sudo sed -i '7i alias i="bash scripts/dlink.sh && cd gits/Dotfiles && bash Dotfiles.sh"' /home/bahaa/.bashrc
+sed -i '7i alias i="bash scripts/dlink.sh && cd gits/Dotfiles && bash Dotfiles.sh"' /home/bahaa/.bashrc
 
 USEREOF
 
