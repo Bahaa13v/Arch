@@ -7,8 +7,8 @@ echo "Done Setup"
 sleep 3
 
 
-#bash 2part.sh
-echo "CANCEL IF YOU DIDN'T PARTITION!!!"
+bash 2part.sh
+echo "Deno Partitioning"
 sleep 3
 
 
