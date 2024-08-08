@@ -29,6 +29,20 @@ echo "bahaa:b" | chpasswd
 
 systemctl enable NetworkManager
 
+
+su bahaa <<'USEREOF'
+mkdir -p /home/bahaa/scripts
+mkdir -p /home/bahaa/gits
+mkdir -p /home/bahaa/gits/Dotfiles
+touch /home/bahaa/scripts/dlink.sh
+echo "nmcli device wifi connect D-Link password 002735mmR" > /home/bahaa/scripts/dlink.sh
+chmod +x /ome/bahaa/scripts/dlink.sh
+git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
+chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
+
+USEREOF
+
+
 EOF
 
 chmod +x /mnt/problem.sh
