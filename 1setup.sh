@@ -6,4 +6,4 @@ pacman-key --init
 
 pacman-key --populate
 
-pacman -S archlinux-keyring
+pacman -S archlinux-keyring --noconfirm
