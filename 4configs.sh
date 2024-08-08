@@ -3,8 +3,6 @@
 cat <<EOF > /mnt/problem.sh
 #!/bin/bash
 
-set -e
-
 pacman -S git grub sudo networkmanager nano --noconfirm
 
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
@@ -26,6 +24,9 @@ echo "root:r" | chpasswd
 useradd -m -G wheel,video,audio -s /bin/bash bahaa
 
 echo "bahaa:b" | chpasswd
+
+sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 systemctl enable NetworkManager
 
