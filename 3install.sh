@@ -1,3 +1,5 @@
+#!/bin/bash
+
 swapon /dev/sda2
 
 mount /dev/sda1 /mnt
