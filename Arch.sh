@@ -21,3 +21,13 @@ echo "Done Configuring"
 sleep 3
 
 bash 5finishing.sh
+
+sleep 3
+read -p "Do you want to reboot? (y/n): " answer
+
+if [ "$answer" = "y" ]; then
+    echo "Rebooting..."
+    reboot
+else
+    echo "if there is a proglem you should check it yourself and if you wanna edit anything feel free"
+fi
