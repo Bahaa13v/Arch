@@ -41,7 +41,7 @@ sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sed -i 's/^#Color/Color/' /etc/pacman.conf
 
-sudo sed -i '23i ILoveCandy' /etc/pacman.conf
+sed -i '23i ILoveCandy' /etc/pacman.conf
 
 
 
