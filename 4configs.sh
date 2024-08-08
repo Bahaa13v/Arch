@@ -5,7 +5,7 @@ cat <<EOF > /mnt/problem.sh
 
 set -e
 
-pacman -S grub sudo networkmanager nano --noconfirm
+pacman -S git grub sudo networkmanager nano --noconfirm
 
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
@@ -28,6 +28,16 @@ useradd -m -G wheel,video,audio -s /bin/bash bahaa
 echo "bahaa:b" | chpasswd
 
 systemctl enable NetworkManager
+
+mkdir -p /home/bahaa/scripts
+touch /home/bahaa/scripts/dlink.sh
+echo "nmcli device wifi connect D-Link password 002735mmR"
+chmod +x /ome/bahaa/scripts/dlink.sh
+
+mkdir -p /home/bahaa/gits
+mkdir -p /home/bahaa/gits/Dotfiles
+git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
+chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
 
 EOF
 
