@@ -25,10 +25,16 @@ useradd -m -G wheel,video,audio -s /bin/bash bahaa
 
 echo "bahaa:b" | chpasswd
 
+systemctl enable NetworkManager
+
+
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
+sed -i 's/^#Color/Color/' /etc/pacman.conf
+sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"/' /etc/default/grub
+sudo sed -i '23i ILoveCandy' /etc/pacman.conf
 
-systemctl enable NetworkManager
 
 
 su bahaa <<'USEREOF'
