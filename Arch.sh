@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "Bahaa's Arch Project..."
 sleep 3
