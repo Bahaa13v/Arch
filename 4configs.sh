@@ -5,7 +5,7 @@ cat <<EOF > /mnt/problem.sh
 
 set -e
 
-pacman -S grub sudo networkmanager nano
+pacman -S grub sudo networkmanager nano --noconfirm
 
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
