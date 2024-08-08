@@ -31,7 +31,7 @@ systemctl enable NetworkManager
 
 mkdir -p /home/bahaa/scripts
 touch /home/bahaa/scripts/dlink.sh
-echo "nmcli device wifi connect D-Link password 002735mmR"
+echo "nmcli device wifi connect D-Link password 002735mmR" > /home/bahaa/scripts/dlink.sh
 chmod +x /ome/bahaa/scripts/dlink.sh
 
 mkdir -p /home/bahaa/gits
