@@ -1,3 +1,5 @@
+#!/bin/bash
+
 arch-chroot /mnt <<EOF
 bash problem.sh
 exit
