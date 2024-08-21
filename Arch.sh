@@ -24,3 +24,9 @@ sleep 3
 
 clear
 bash 5finishing.sh
+
+cd
+clear
+
+echo "Done installing thanks to bahaa"
+echo "when you reboot and log in type i then enter"
