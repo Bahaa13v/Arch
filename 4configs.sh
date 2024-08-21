@@ -43,7 +43,7 @@ mkdir -p /home/bahaa/scripts
 mkdir -p /home/bahaa/gits
 mkdir -p /home/bahaa/gits/Dotfiles
 touch /home/bahaa/scripts/idoom.sh
-echo "nmcli device wifi connect "Idoom 4G_99661" password 45629514" > /home/bahaa/scripts/idoom.sh
+echo "nmcli device wifi connect Idoom/ 4G_99661 password 45629514" > /home/bahaa/scripts/idoom.sh
 chmod +x /home/bahaa/scripts/idoom.sh
 git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
 chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
