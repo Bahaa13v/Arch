@@ -2,6 +2,7 @@
 
 arch-chroot /mnt <<EOF
 bash problem.sh
+rm problem.sh
 exit
 EOF
 
