@@ -3,10 +3,9 @@
 cat <<EOF > /mnt/problem.sh
 #!/bin/bash
 
-pacman -S git os-prober grub sudo networkmanager nano --noconfirm
+pacman -S git grub sudo nano networkmanager --noconfirm
 
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
-
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
@@ -17,13 +16,7 @@ hwclock --systohc
 
 echo "Arch" > /etc/hostname
 
-sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"/' /etc/default/grub
-sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
-
 grub-install /dev/sda
-
-sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"/' /etc/default/grub
-sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -49,15 +42,14 @@ su bahaa <<'USEREOF'
 mkdir -p /home/bahaa/scripts
 mkdir -p /home/bahaa/gits
 mkdir -p /home/bahaa/gits/Dotfiles
-touch /home/bahaa/scripts/dlink.sh
-echo "nmcli device wifi connect D-Link password 002735mmR" > /home/bahaa/scripts/dlink.sh
-chmod +x /home/bahaa/scripts/dlink.sh
+touch /home/bahaa/scripts/idoom.sh
+echo "nmcli device wifi connect "Idoom 4G_99661" password 45629514" > /home/bahaa/scripts/idoom.sh
+chmod +x /home/bahaa/scripts/idoom.sh
 git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
 chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
-sed -i '7i alias i="bash scripts/dlink.sh && cd gits/Dotfiles && bash Dotfiles.sh"' /home/bahaa/.bashrc
+sed -i '7i alias i="bash scripts/idoom.sh && cd gits/Dotfiles && bash Dotfiles.sh"' /home/bahaa/.bashrc
 
 USEREOF
-
 
 EOF
 
