@@ -48,6 +48,7 @@ chmod +x /home/bahaa/scripts/idoom.sh
 git clone https://github.com/Bahaa13v/Dotfiles /home/bahaa/gits/Dotfiles
 chmod +x /home/bahaa/gits/Dotfiles/Dotfiles.sh
 sed -i '7i alias i="bash scripts/idoom.sh && cd gits/Dotfiles && bash Dotfiles.sh"' /home/bahaa/.bashrc
+exit
 
 USEREOF
 
