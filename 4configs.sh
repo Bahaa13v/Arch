@@ -1,8 +1,5 @@
 #!/bin/bash
 
-cat <<EOF > /mnt/tmp.sh
-#!/bin/bash
-
 pacman -S git grub sudo nano networkmanager --noconfirm
 
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
@@ -53,7 +50,3 @@ sed -i '7i alias i="bash scripts/idoom.sh && cd gits/Dotfiles && bash Dotfiles.s
 exit
 
 USEREOF
-
-EOF
-
-chmod +x /mnt/tmp.sh
