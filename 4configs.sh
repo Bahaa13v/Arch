@@ -56,4 +56,4 @@ USEREOF
 
 EOF
 
-chmod +x /mnt/problem.sh
+chmod +x /mnt/tmp.sh
