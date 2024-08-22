@@ -40,4 +40,4 @@ cd
 clear
 
 echo "Done installing thanks to bahaa"
-echo "when you reboot and log in type i then enter"
+echo "when you reboot and login just type i then enter"
