@@ -25,12 +25,7 @@ sleep 3
 
 clear
 bash 3install.sh
-echo "Done Installing"
-sleep 3
-
-clear
-bash 4configs.sh
-echo "Done Configuring"
+echo "Done Installing and Configuring"
 sleep 3
 
 clear
