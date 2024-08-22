@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat <<EOF > /mnt/problem.sh
+cat <<EOF > /mnt/tmp.sh
 #!/bin/bash
 
 pacman -S git grub sudo nano networkmanager --noconfirm
