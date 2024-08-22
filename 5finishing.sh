@@ -1,11 +1,11 @@
 #!/bin/bash
 
 arch-chroot /mnt <<EOF
-bash problem.sh
+bash tmp.sh
 exit
 EOF
 
-rm /mnt/problem.sh
+rm /mnt/tmp.sh
 
 umount -R /mnt
 swapoff /dev/sda2
