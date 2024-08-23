@@ -8,7 +8,10 @@ parted /dev/sda --script -- mkpart primary linux-swap -16GB 100%
 
 partprobe /dev/sda
 
+mkswap /dev/sda2
 swapon /dev/sda2
+
+mkfs.btrfs -f /dev/sda1
 mount /dev/sda1 /mnt
 
 lsblk
