@@ -26,7 +26,3 @@ echo "bahaa:b" | chpasswd
 systemctl enable NetworkManager
 
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
-
-sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-sed -i 's/^#Color/Color/' /etc/pacman.conf
-sed -i '23i ILoveCandy' /etc/pacman.conf
